@@ -3,7 +3,7 @@ Summary:	A New Java/UML Object-Oriented Design Tool
 Summary(pl):	¦rodowisko obiektowo zorientowanego projektowania narzêdzi UML
 Name:		jude
 Version:	1.4
-Release:	1
+Release:	2
 License:	Freeware
 Group:		Applications/Engineering
 Source0:	http://objectclub.esm.co.jp/Jude/com%(echo %{version} |tr -d .)/%{name}-%{codename}-%(echo %{version} |tr . _).zip
