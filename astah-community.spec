@@ -22,7 +22,7 @@ przygotowywanie oprogramowania w JavaTM i UML1.4(zunifikowany jêzyk
 modelowania).
 
 %prep
-%setup -q -n jude_take -n jude_take -n jude_take -n jude_take
+%setup -q -n jude_take
 
 %install
 rm -rf $RPM_BUILD_ROOT
