@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Jude
+Comment=Jude
+Comment[pl]=Jude
+Exec=jude
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Development;
+# vi: encoding=utf-8
