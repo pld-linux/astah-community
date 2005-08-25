@@ -2,12 +2,13 @@
 Summary:	A New Java/UML Object-Oriented Design Tool
 Summary(pl):	¦rodowisko obiektowo zorientowanego projektowania narzêdzi UML
 Name:		jude
-Version:	1.4
-Release:	2
+Version:	1.6.2
+Release:	1
 License:	Freeware
 Group:		Applications/Engineering
-Source0:	http://objectclub.esm.co.jp/Jude/com%(echo %{version} |tr -d .)/%{name}-%{codename}-%(echo %{version} |tr . _).zip
+Source0:	http://www.esm.co.jp/jude/jude-%{codename}-%(echo %{version} | tr . _).zip
 Source1:	%{name}.desktop
+Source2:	%{name}-icon.png
 URL:		http://objectclub.esm.co.jp/Jude/
 Requires:	jre
 BuildArch:	noarch
@@ -28,7 +29,7 @@ jêzyk modelowania).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name},%{_desktopdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name},%{_desktopdir},%{_pixmapsdir}}
 
 cat <<EOF > $RPM_BUILD_ROOT%{_bindir}/%{name}
 #!/bin/sh
@@ -37,6 +38,7 @@ EOF
 
 install jude-%{codename}.jar JudeDefaultModel.jude $RPM_BUILD_ROOT%{_datadir}/%{name}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -47,3 +49,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.png
