@@ -3,6 +3,7 @@ Encoding=UTF-8
 Name=Jude
 Comment=Jude
 Comment[pl]=Jude
+Icon=jude.png
 Exec=jude
 Terminal=false
 MultipleArgs=false
