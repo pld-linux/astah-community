@@ -9,10 +9,10 @@ Group:		Applications/Engineering
 Source0:	http://www.esm.co.jp/jude/jude-%{codename}-%(echo %{version} | tr . _).zip
 Source1:	%{name}.desktop
 Source2:	%{name}-icon.png
+NoSource:	0
 URL:		http://objectclub.esm.co.jp/Jude/
 Requires:	jre
 BuildArch:	noarch
-NoSource:	0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -20,8 +20,8 @@ Jude is a new tool which supports your object-oriented software
 designing in JavaTM and UML1.4 (Unified Modeling Language).
 
 %description -l pl
-Jude jest nowym narzêdziem obs³uguj±cym obiektowo-zorientowane
-przygotowywanie oprogramowania w JavaTM i UML1.4 (zunifikowany 
+Jude jest nowym narzêdziem obs³uguj±cym zorientowane obiektowo
+przygotowywanie oprogramowania w JavaTM i UML1.4 (zunifikowany
 jêzyk modelowania).
 
 %prep
