@@ -1,6 +1,6 @@
 %define		codename	community
 Summary:	A New Java/UML Object-Oriented Design Tool
-Summary(pl):	Narzêdzie wspomagaj±ce projektowanie oprogramowania w UML
+Summary(pl.UTF-8):   NarzÄ™dzie wspomagajÄ…ce projektowanie oprogramowania w UML
 Name:		jude
 Version:	2.4.4
 Release:	1
@@ -19,8 +19,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Jude is a new tool which supports your object-oriented software
 designing in JavaTM and UML1.4 (Unified Modeling Language).
 
-%description -l pl
-Jude jest nowym narzêdziem wspomagaj±cym zorientowane obiektowo
+%description -l pl.UTF-8
+Jude jest nowym narzÄ™dziem wspomagajÄ…cym zorientowane obiektowo
 projektowanie oprogramowania w JavaTM i UML1.4 (Unified Modeling
 Language).
 
