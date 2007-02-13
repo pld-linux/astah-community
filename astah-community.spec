@@ -1,6 +1,6 @@
 %define		codename	community
 Summary:	A New Java/UML Object-Oriented Design Tool
-Summary(pl.UTF-8):   Narzędzie wspomagające projektowanie oprogramowania w UML
+Summary(pl.UTF-8):	Narzędzie wspomagające projektowanie oprogramowania w UML
 Name:		jude
 Version:	2.4.4
 Release:	1
