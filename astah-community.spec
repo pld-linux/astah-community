@@ -5,7 +5,8 @@ Summary(pl.UTF-8):	Narzędzie wspomagające projektowanie oprogramowania w UML
 Name:		jude
 Version:	5.1.1
 Release:	1
-License:	Free (not distributable)
+# non-distributable, can be used for free upon restrictions and registration
+License:	Proprietary (see http://jude.change-vision.com/jude-web/notes/ProductLicenseAgreement.html)
 Group:		Applications/Engineering
 Source0:	http://jude-users.com/edujjude/jude-community-%{ver}.zip
 # NoSource0-md5:	ce46e0f9ca720ead60d52c052da228a3
@@ -21,10 +22,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Jude is a new tool which supports your object-oriented software
 designing in JavaTM and UML1.4 (Unified Modeling Language).
 
+This package contains Community version, which is freely usable upon
+some restrictions after registration on vendor site.
+
 %description -l pl.UTF-8
 Jude jest nowym narzędziem wspomagającym zorientowane obiektowo
 projektowanie oprogramowania w JavaTM i UML1.4 (Unified Modeling
 Language).
+
+Ten pakiet zawiera wersję społecznościową, której można używać bez
+opłat pod pewnymi ograniczenami, po uprzedniej rejestracji na stronie
+producenta.
 
 %prep
 %setup -q -n %{name}_%{codename}
