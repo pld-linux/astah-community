@@ -1,17 +1,18 @@
 %define		codename	community
+%define		ver		%(echo %{version} | tr . _)
 Summary:	A New Java/UML Object-Oriented Design Tool
 Summary(pl.UTF-8):	Narzędzie wspomagające projektowanie oprogramowania w UML
 Name:		jude
-Version:	3.2.1
+Version:	5.1.1
 Release:	1
-License:	Freeware
+License:	Free (not distributable)
 Group:		Applications/Engineering
-Source0:	http://jude-users.com/edujjude/%{name}-community-3_2_1.zip
-# NoSource0-md5:	746ed0ab6bf076c62479475166e94f74
+Source0:	http://jude-users.com/edujjude/jude-community-%{ver}.zip
+# NoSource0-md5:	ce46e0f9ca720ead60d52c052da228a3
 Source1:	%{name}.desktop
 Source2:	%{name}-icon.png
 NoSource:	0
-URL:		http://jude.change-vision.com/jude-web/
+URL:		http://jude-users.com/en/
 Requires:	jre
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,7 +35,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name},%{_desktopdir},%{_pixm
 
 cat <<'EOF' > $RPM_BUILD_ROOT%{_bindir}/%{name}
 #!/bin/sh
-java -Xms16m -Xmx256m -Xss1m -jar %{_datadir}/%{name}/jude-%{codename}.jar $*
+exec java -Xms16m -Xmx256m -Xss1m -jar %{_datadir}/%{name}/jude-%{codename}.jar $*
 EOF
 
 install jude-%{codename}.jar JudeDefaultModel.jude $RPM_BUILD_ROOT%{_datadir}/%{name}
