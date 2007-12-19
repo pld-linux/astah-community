@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Comment=JUDE Document
-Icon=document
+Icon=jude
 Type=MimeType
 MimeType=application/x-jude
 Patterns=*.jude;
