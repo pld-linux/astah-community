@@ -10,4 +10,5 @@ Terminal=false
 MultipleArgs=false
 Type=Application
 Categories=Development;ProjectManagement;
+MimeType=application/x-jude;
 # vi: encoding=utf-8
