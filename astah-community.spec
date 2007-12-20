@@ -18,7 +18,7 @@ NoSource:	0
 URL:		http://jude-users.com/en/
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	jre
+Requires:	jre-X11
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
