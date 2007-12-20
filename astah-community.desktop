@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Jude
 GenericName=UML Modeling Tool
+GenericName[pl]=Narzędzie do modelowania UML
 Comment=Jude
 Comment[pl]=Jude
 Icon=jude.png
