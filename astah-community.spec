@@ -4,13 +4,13 @@
 Summary:	A New Java/UML Object-Oriented Design Tool
 Summary(pl.UTF-8):	Narzędzie wspomagające projektowanie oprogramowania w UML
 Name:		jude
-Version:	5.1.1
-Release:	2
+Version:	5.2
+Release:	1
 # non-distributable, can be used for free upon restrictions and registration
 License:	Proprietary (see http://jude.change-vision.com/jude-web/notes/ProductLicenseAgreement.html)
 Group:		Applications/Engineering
 Source0:	http://jude-users.com/edujjude/%{name}-community-%{ver}.zip
-# NoSource0-md5:	ce46e0f9ca720ead60d52c052da228a3
+# NoSource0-md5:	a2d9727288616f74e266d39d13bbbbe4
 Source1:	%{name}.desktop
 Source2:	x-%{name}.desktop
 Source3:	%{name}-icon.png
@@ -47,14 +47,14 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}}
 
 cat <<'EOF' > $RPM_BUILD_ROOT%{_bindir}/%{name}
 #!/bin/sh
-exec java -Xms16m -Xmx256m -Xss1m -jar %{_datadir}/%{name}/jude-%{codename}.jar ${1:+"$@"}
+exec java -Xms16m -Xmx512m -Xss2m -jar %{_datadir}/%{name}/jude-%{codename}.jar ${1:+"$@"}
 EOF
-install jude-%{codename}.jar JudeDefaultModel.jude $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -a jude-%{codename}.jar *.jude $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_datadir}/mimelnk/application,%{_pixmapsdir}}
-install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
-install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/mimelnk/application
-install %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
+cp -a %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+cp -a %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/mimelnk/application
+cp -a %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
 
 %clean
 rm -rf $RPM_BUILD_ROOT
