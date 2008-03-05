@@ -4,13 +4,13 @@
 Summary:	A New Java/UML Object-Oriented Design Tool
 Summary(pl.UTF-8):	Narzędzie wspomagające projektowanie oprogramowania w UML
 Name:		jude
-Version:	5.2
-Release:	2
+Version:	5.2.1
+Release:	1
 # non-distributable, can be used for free upon restrictions and registration
 License:	Proprietary (see http://jude.change-vision.com/jude-web/notes/ProductLicenseAgreement.html)
 Group:		Applications/Engineering
 Source0:	http://jude-users.com/edujjude/%{name}-community-%{ver}.zip
-# NoSource0-md5:	a2d9727288616f74e266d39d13bbbbe4
+# NoSource0-md5:	e8d90e75b4d3dd45730f4acfb248901b
 Source1:	%{name}.desktop
 Source2:	x-%{name}.desktop
 Source3:	%{name}-icon.png
