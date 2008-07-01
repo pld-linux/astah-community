@@ -1,3 +1,5 @@
+# TODO
+# - package API (to examplesdir? subpkg?)
 %define		codename	community
 %define		ver		%(echo %{version} | tr . _)
 %include	/usr/lib/rpm/macros.java
@@ -61,9 +63,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README* ReleaseNote*
+%doc README-e.txt ReleaseNote-e.html
+%doc %lang(ja) README.txt ReleaseNote.html ProductInformation.txt
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/%{name}-%{codename}.jar
+%{_datadir}/%{name}/Welcome.jude
+%lang(ja) %{_datadir}/%{name}/Welcome_ja.jude
 %{_desktopdir}/%{name}.desktop
 %{_datadir}/mimelnk/application/x-%{name}.desktop
 %{_pixmapsdir}/%{name}.png
