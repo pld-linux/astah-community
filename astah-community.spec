@@ -71,7 +71,7 @@ Javadoc pour astah.
 
 cat <<'EOF' > %{name}.sh
 #!/bin/sh
-exec java -Xms16m -Xmx512m -Xss2m -jar %{_datadir}/%{name}/astah-%{codename}.jar ${1:+"$@"}
+exec java -Xms16m -Xmx512m -Xss2m -jar %{_datadir}/%{name}/%{name}-%{codename}.jar ${1:+"$@"}
 EOF
 
 %install
@@ -79,14 +79,14 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}}
 
 install -p %{name}.sh $RPM_BUILD_ROOT%{_bindir}/%{name}
-cp -a astah-%{codename}.jar $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -a %{name}-%{codename}.jar $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a *.asta $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_datadir}/mime/packages,%{_pixmapsdir}}
 cp -a %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
-cp -a %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/mime/packages/astah.xml
+cp -a %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/mime/packages/%{name}.xml
 cp -a %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
 
 # javadoc
@@ -118,7 +118,7 @@ ln -nfs %{name}-%{version} %{_javadocdir}/%{name}
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/%{name}-%{codename}.jar
 %{_desktopdir}/%{name}.desktop
-%{_datadir}/mime/packages/astah.xml
+%{_datadir}/mime/packages/%{name}.xml
 %{_pixmapsdir}/%{name}.png
 
 %dir %{_examplesdir}/%{name}-%{version}
