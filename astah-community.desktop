@@ -1,14 +1,13 @@
 [Desktop Entry]
-Name=Jude
+Name=Astah*
 GenericName=UML Modeling Tool
 GenericName[pl]=Narzędzie do modelowania UML
-Comment=Jude
-Comment[pl]=Jude
-Icon=jude
-Exec=jude
+Comment=Astah*
+Icon=astah
+Exec=astah
 Terminal=false
 MultipleArgs=false
 Type=Application
 Categories=Development;ProjectManagement;
-MimeType=application/x-jude;
+MimeType=application/x-astah;
 # vi: encoding=utf-8

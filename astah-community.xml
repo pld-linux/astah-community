@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+	<mime-type type="application/x-astah">
+		<comment xml:lang="en">Astah* Document</comment>
+		<glob pattern="*.asta"/>
+		<icon name="astah" />
+		<sub-class-of type="application/zip" />
+		<!-- backward compat with jude -->
+		<glob pattern="*.jude"/>
+		<alias type="application/x-jude"/>
+	</mime-type>
+</mime-info>
