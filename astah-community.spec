@@ -4,10 +4,11 @@
 #
 # Conditional build:
 %bcond_without	javadoc		# don't build javadoc
+%bcond_without	pld			# don't include pld deps to build universal rpm
 
 %define		codename	community
 %define		ver		%(echo %{version} | tr . _)
-%include	/usr/lib/rpm/macros.java
+%{?with_pld:%include	/usr/lib/rpm/macros.java}
 Summary:	A New Java/UML Object-Oriented Design Tool
 Summary(pl.UTF-8):	Narzędzie wspomagające projektowanie oprogramowania w UML
 Name:		astah
@@ -30,7 +31,7 @@ BuildRequires:	rpmbuild(macros) >= 1.311
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	shared-mime-info
 BuildRequires:	unzip
-Requires:	jre-X11
+%{?with_pld:Requires:	jre-X11}
 Obsoletes:	jude
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
