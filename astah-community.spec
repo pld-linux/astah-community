@@ -11,15 +11,15 @@
 Summary:	A New Java/UML Object-Oriented Design Tool
 Summary(pl.UTF-8):	Narzędzie wspomagające projektowanie oprogramowania w UML
 Name:		astah
-Version:	6.2.1
-Release:	0.6
+Version:	6.3
+Release:	1
 # non-distributable, can be used for free upon restrictions and registration
 # http://astah.change-vision.com/en/product/astah-eula.html
 License:	Astah* EULA
 Group:		Applications/Engineering
 # Source0Download:	https://members.change-vision.com/members/files/astah_community/%{ver}/astah-community-%{ver}.zip
 Source0:	http://jude-users.com/edujjude/%{name}-%{codename}-%{ver}.zip
-# NoSource0-md5:	7323ea7b751a6bd39f0dd906cdf58ca4
+# NoSource0-md5:	2988d8d91352fe3130c03e4d1fdc12a1
 Source1:	%{name}.desktop
 Source2:	%{name}.xml
 Source3:	%{name}-icon.png
@@ -112,8 +112,8 @@ ln -nfs %{name}-%{version} %{_javadocdir}/%{name}
 
 %files
 %defattr(644,root,root,755)
-%doc README-e.txt ReleaseNote-e.html
-%doc %lang(ja) README.txt ReleaseNote.html ProductInformation.txt
+%doc ReleaseNote-e.html
+%doc %lang(ja) ReleaseNote.html ProductInformation.txt
 %attr(755,root,root) %{_bindir}/%{name}
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/%{name}-%{codename}.jar
