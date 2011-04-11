@@ -1,13 +1,13 @@
 [Desktop Entry]
-Name=Astah*
+Name=Astah* Community
+Comment=Lightweight, easy-to-use UML 2.x modeler
+Comment[ja]=UMLの学習に最適な個人向けツールです
+Comment[pl]=Narzędzie do modelowania UML
 GenericName=UML Modeling Tool
-GenericName[pl]=Narzędzie do modelowania UML
-Comment=Astah*
-Icon=astah
-Exec=astah
+Exec=astah-community
+Icon=astah-community
+NoDisplay=false
 Terminal=false
-MultipleArgs=false
 Type=Application
 Categories=Development;ProjectManagement;
 MimeType=application/x-astah;
-# vi: encoding=utf-8
