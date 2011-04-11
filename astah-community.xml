@@ -2,6 +2,7 @@
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
 	<mime-type type="application/x-astah">
 		<comment xml:lang="en">Astah* Document</comment>
+		<comment xml:lang="ja">Astah* ドキュメント</comment>
 		<glob pattern="*.asta"/>
 		<icon name="astah" />
 		<sub-class-of type="application/zip" />
