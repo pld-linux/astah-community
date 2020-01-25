@@ -7,7 +7,6 @@
 %bcond_without	pld			# don't include pld deps to build universal rpm
 
 %define		ver		%(echo %{version} | tr . _)
-%{?with_pld:%include	/usr/lib/rpm/macros.java}
 Summary:	UML Modeling Tool for study of UML
 Summary(pl.UTF-8):	Narzędzie wspomagające projektowanie oprogramowania w UML
 Name:		astah-community
